@@ -8,7 +8,6 @@ public class UnitTest {
 		String str = UnitTest.class.getResource("/").getPath();
 		
 		System.out.println(str);
-		
 		System.out.println(System.getProperty("user.dir"));
 
 	}

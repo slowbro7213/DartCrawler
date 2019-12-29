@@ -9,7 +9,7 @@ import project.jaylee.dartcrawler.dartcall.DartCall;
 
 /**
  * DartBridge
- * config¸¦ ÀĞ¾î ÀûÀıÇÑ DartCallÀ» È£ÃâÇÏ°í url list¸¦ ¹ŞÀº ÈÄ °¢ urlÀÇ html¿¡¼­ »ó¼¼ÆäÀÌÁö¿¡ ´ëÇÑ ÆÄ¶ó¹ÌÅÍ¸¦ Å©·Ñ¸µÇÑ´Ù.
+ * configë¥¼ ì½ì–´ ì ì ˆí•œ DartCallì„ í˜¸ì¶œí•˜ê³  url listë¥¼ ë°›ì€ í›„ ê° urlì˜ htmlì—ì„œ ìƒì„¸í˜ì´ì§€ì— ëŒ€í•œ íŒŒë¼ë¯¸í„°ë¥¼ í¬ë¡¤ë§í•œë‹¤.
  */
 public class DartBridge {
 	

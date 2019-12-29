@@ -8,22 +8,22 @@ import java.net.URL;
 
 /**
  * RequestDart
- * Dart API ¿äÃ»º¯¼ö
+ * Dart API ìš”ì²­ë³€ìˆ˜
  * var					description							format							default
  * 
- * dartApiUrl		:	API È£Ãâurl(json¸®ÅÏ)
- * auth				:	ÀÎÁõÅ°
- * crp_cd			:	»óÀå»ç Á¾¸ñÄÚµå or ±âÅ¸¹ıÀÎ °íÀ¯¹øÈ£			6ÀÚ¸® or 8ÀÚ¸®
- * end_dt			:	Á¢¼öÀÏÀÚ ³¡								YYYYMMDD						today
- * start_dt			:	Á¢¼öÀÏÀÚ ½ÃÀÛ							YYYYMMDD						end_dt(crp_cd ¾ø´Ù¸é 3°³¿ù)
- * fin_rpt			:	ÃÖ àº¸°í¼­¸¸ °Ë»ö¿©ºÎ						Y/N								N
- * dsp_tp			:	À¯Çü									A(Á¤±â°ø½Ã)
- * bsn_tp			:	»ó¼¼À¯Çü								A001(»ç¾÷º¸°í¼­)
- * sort				:	Á¤·Ä									date/crp(È¸»ç¸í)/rpt(º¸°í¼­¸í)		date
- * series			:	Á¤·Ä¹æÇâ								asc/desc						desc
- * page_no			:	ÆäÀÌÁö ¹øÈ£								n								1
- * page_set			:	ÆäÀÌÁö´ç °Ç¼ö							ÃÖ´ë100							10
- * callback			:	Äİ¹éÇÔ¼ö¸í(JSONP Àü¿ë)
+ * dartApiUrl		:	API í˜¸ì¶œurl(jsonë¦¬í„´)
+ * auth				:	ì¸ì¦í‚¤
+ * crp_cd			:	ìƒì¥ì‚¬ ì¢…ëª©ì½”ë“œ or ê¸°íƒ€ë²•ì¸ ê³ ìœ ë²ˆí˜¸			6ìë¦¬ or 8ìë¦¬
+ * end_dt			:	ì ‘ìˆ˜ì¼ì ë								YYYYMMDD						today
+ * start_dt			:	ì ‘ìˆ˜ì¼ì ì‹œì‘							YYYYMMDD						end_dt(crp_cd ì—†ë‹¤ë©´ 3ê°œì›”)
+ * fin_rpt			:	ìµœì¡·ë³´ê³ ì„œë§Œ ê²€ìƒ‰ì—¬ë¶€						Y/N								N
+ * dsp_tp			:	ìœ í˜•									A(ì •ê¸°ê³µì‹œ)
+ * bsn_tp			:	ìƒì„¸ìœ í˜•								A001(ì‚¬ì—…ë³´ê³ ì„œ)
+ * sort				:	ì •ë ¬									date/crp(íšŒì‚¬ëª…)/rpt(ë³´ê³ ì„œëª…)		date
+ * series			:	ì •ë ¬ë°©í–¥								asc/desc						desc
+ * page_no			:	í˜ì´ì§€ ë²ˆí˜¸								n								1
+ * page_set			:	í˜ì´ì§€ë‹¹ ê±´ìˆ˜							ìµœëŒ€100							10
+ * callback			:	ì½œë°±í•¨ìˆ˜ëª…(JSONP ì „ìš©)
  */
 public class RequestDart {
 	private String requestUrl 		= "";

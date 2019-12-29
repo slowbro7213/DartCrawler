@@ -14,7 +14,7 @@ import com.google.gson.JsonParser;
 
 /**
  * DartParser
- * Dart API ÆÄ¶ó¹ÌÅÍ¸¦ ¼¼ÆÃÇÑ´ë·Î °á°ú json/xml À» °¡Á®¿À°í GsonÀ¸·Î ÆÄ½ÌÇÏ´Â Å¬·¡½º
+ * Dart API íŒŒë¼ë¯¸í„°ë¥¼ ì„¸íŒ…í•œëŒ€ë¡œ ê²°ê³¼ json/xml ì„ ê°€ì ¸ì˜¤ê³  Gsonìœ¼ë¡œ íŒŒì‹±í•˜ëŠ” í´ë˜ìŠ¤
  */
 public class DartParser {
 	Gson gson = null;

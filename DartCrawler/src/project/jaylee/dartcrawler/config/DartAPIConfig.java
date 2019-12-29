@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 /**
  * DartAPIConfig
- * Dart API È£Ãâ Å¬·¡½º¿¡ ³Ñ±æ ÆÄ¶ó¹ÌÅÍ¸¦ Á¤¸®ÇÏ´Â config¸¦ ÀĞ´Â Å¬·¡½º
+ * Dart API í˜¸ì¶œ í´ë˜ìŠ¤ì— ë„˜ê¸¸ íŒŒë¼ë¯¸í„°ë¥¼ ì •ë¦¬í•˜ëŠ” configë¥¼ ì½ëŠ” í´ë˜ìŠ¤
  */
 public class DartAPIConfig {
 	String configPath = "";
@@ -22,7 +22,7 @@ public class DartAPIConfig {
 	public ArrayList<String> readConfig() {
 		ArrayList<String> params = new ArrayList<String>();
 		
-		// ½ÇÁ¦·Î´Â config¿¡¼­ ÀĞ¾î¿Â °ªÀ» ÀúÀå
+		// ì‹¤ì œë¡œëŠ” configì—ì„œ ì½ì–´ì˜¨ ê°’ì„ ì €ì¥
 		HashMap<String,String> map = new HashMap<String,String>();
 		map.put(daParams.AUTH		, "ba03b3604fc296bc4b7bc7d9d4eff52dc40e9af6"	);
 		map.put(daParams.CRP_CD		, "035420"										);

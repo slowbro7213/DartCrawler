@@ -2,7 +2,7 @@ package project.jaylee.dartcrawler.config;
 
 /**
  * RunTimeArgs
- * »ç¿ëÀÚ ½ÇÇàÀÎÀÚ¸¦ ÀĞ´Â Å¬·¡½º
+ * ì‚¬ìš©ì ì‹¤í–‰ì¸ìë¥¼ ì½ëŠ” í´ë˜ìŠ¤
  */
 public class RunTimeArgs {
 
