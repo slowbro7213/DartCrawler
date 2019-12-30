@@ -1,11 +1,13 @@
 package project.jaylee.dartcrawler.bridge;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import project.jaylee.dartcrawler.config.DartAPIConfig;
-import project.jaylee.dartcrawler.config.DartAPIParams;
+import project.jaylee.dartcrawler.config.DartAPIProperty;
 import project.jaylee.dartcrawler.dartapi.ResponseDart;
 import project.jaylee.dartcrawler.dartcall.DartCall;
+import project.jaylee.dartcrawler.util.URLConnectUtil;
 
 /**
  * DartBridge
@@ -14,27 +16,41 @@ import project.jaylee.dartcrawler.dartcall.DartCall;
 public class DartBridge {
 	
 	DartAPIConfig daConfig = null;
-	DartAPIParams daParams = null;
 	
 	public DartBridge () {
 		daConfig = new DartAPIConfig();
-		daParams = new DartAPIParams();
 	}
 	
 	
 	public void job() {
 		ArrayList<String> params = daConfig.readConfig();
-		int paramSize = params.size();
 		
-		DartCall 	 dc 		= new DartCall();
-		ResponseDart respDart	= dc.callAPI();
-		//paramSize == 2, 5, 10, 11
-		if (paramSize == 2) respDart = dc.callAPI(params.get(0), params.get(1));
-		if (paramSize == 5) respDart = dc.callAPI(params.get(0), params.get(1));
-		if (paramSize == 10) respDart = dc.callAPI(params.get(0), params.get(1));
-		if (paramSize == 11) respDart = dc.callAPI(params.get(0), params.get(1));
+		DartCall 	 dc 			= new DartCall();
+		ResponseDart respDart		= dc.callAPI(params);
+		ArrayList<String> urlList 	= dc.getUrlList(respDart);
+		
+		ArrayList<String> htmlDocuments = new ArrayList<String>();
+		for (String fullUrl : urlList) {
+			String url 			= fullUrl.split("?")[0];
+			String parameters 	= fullUrl.split("?")[1];
+			
+			String htmlDocument = URLConnectUtil.getHtmlDocument(url, parameters);
+			String viewerURL = getViewerURL(htmlDocument); 
+			htmlDocuments.add(viewerURL);
+		}
+
+	}
+	
+	/**
+	 * getViewerURL
+	 * 파싱한 html문서에서 viewer에 사용할 파라미터를 추출하여 url로 만든 후 리턴 
+	 * @param htmlDocument
+	 * @return
+	 */
+	private String getViewerURL(String htmlDocument) {
 		
 		
 		
+		return null;
 	}
 }

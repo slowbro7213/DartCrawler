@@ -1,10 +1,6 @@
 package project.jaylee.dartcrawler.dartapi;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import project.jaylee.dartcrawler.config.DartAPIProperty;
 
 /**
  * RequestDart
@@ -42,7 +38,7 @@ public class RequestDart {
 	
 
 	public RequestDart() {
-		this.requestUrl = "http://dart.fss.or.kr/api/search.json";
+		this.requestUrl = DartAPIProperty.DART_API_JSON_URL;
 	}
 	
 	public RequestDart(String url) {

@@ -9,11 +9,9 @@ import java.util.HashMap;
  */
 public class DartAPIConfig {
 	String configPath = "";
-	DartAPIParams daParams = null;
 	
 	public DartAPIConfig() {
 		this.configPath = findConfig();
-		this.daParams = new DartAPIParams();
 	}
 
 	private String findConfig() {
@@ -24,44 +22,44 @@ public class DartAPIConfig {
 		
 		// 실제로는 config에서 읽어온 값을 저장
 		HashMap<String,String> map = new HashMap<String,String>();
-		map.put(daParams.AUTH		, "ba03b3604fc296bc4b7bc7d9d4eff52dc40e9af6"	);
-		map.put(daParams.CRP_CD		, "035420"										);
-		map.put(daParams.END_DT		, ""											);
-		map.put(daParams.START_DT	, ""											);
-		map.put(daParams.FIN_RPT	, ""											);
-		map.put(daParams.DSP_TP		, ""											);
-		map.put(daParams.BSN_TP		, ""											);
-		map.put(daParams.SORT		, ""											);
-		map.put(daParams.SERIES		, ""											);
-		map.put(daParams.PAGE_NO	, ""											);
-		map.put(daParams.PAGE_SET	, ""											);
-		map.put(daParams.CALLBACK	, ""											);
+		map.put(DartAPIProperty.AUTH		, "ba03b3604fc296bc4b7bc7d9d4eff52dc40e9af6"	);
+		map.put(DartAPIProperty.CRP_CD	, "035420"										);
+		map.put(DartAPIProperty.END_DT	, ""											);
+		map.put(DartAPIProperty.START_DT	, ""											);
+		map.put(DartAPIProperty.FIN_RPT	, ""											);
+		map.put(DartAPIProperty.DSP_TP	, ""											);
+		map.put(DartAPIProperty.BSN_TP	, ""											);
+		map.put(DartAPIProperty.SORT		, ""											);
+		map.put(DartAPIProperty.SERIES	, ""											);
+		map.put(DartAPIProperty.PAGE_NO	, ""											);
+		map.put(DartAPIProperty.PAGE_SET	, ""											);
+		map.put(DartAPIProperty.CALLBACK	, ""											);
 		//
 
 		String param = "";
-		param = map.get(daParams.AUTH		);
+		param = map.get(DartAPIProperty.AUTH		);
 		if (param != null && !param.equals("")) params.add(param);
-		param = map.get(daParams.CRP_CD		);
+		param = map.get(DartAPIProperty.CRP_CD		);
 		if (param != null && !param.equals("")) params.add(param);
-		param = map.get(daParams.END_DT		);
+		param = map.get(DartAPIProperty.END_DT		);
 		if (param != null && !param.equals("")) params.add(param);
-		param = map.get(daParams.START_DT	);
+		param = map.get(DartAPIProperty.START_DT	);
 		if (param != null && !param.equals("")) params.add(param);
-		param = map.get(daParams.FIN_RPT	);
+		param = map.get(DartAPIProperty.FIN_RPT	);
 		if (param != null && !param.equals("")) params.add(param);
-		param = map.get(daParams.DSP_TP		);
+		param = map.get(DartAPIProperty.DSP_TP		);
 		if (param != null && !param.equals("")) params.add(param);
-		param = map.get(daParams.BSN_TP		);
+		param = map.get(DartAPIProperty.BSN_TP		);
 		if (param != null && !param.equals("")) params.add(param);
-		param = map.get(daParams.SORT		);
+		param = map.get(DartAPIProperty.SORT		);
 		if (param != null && !param.equals("")) params.add(param);
-		param = map.get(daParams.SERIES		);
+		param = map.get(DartAPIProperty.SERIES		);
 		if (param != null && !param.equals("")) params.add(param);
-		param = map.get(daParams.PAGE_NO	);
+		param = map.get(DartAPIProperty.PAGE_NO	);
 		if (param != null && !param.equals("")) params.add(param);
-		param = map.get(daParams.PAGE_SET	);
+		param = map.get(DartAPIProperty.PAGE_SET	);
 		if (param != null && !param.equals("")) params.add(param);
-		param = map.get(daParams.CALLBACK	);
+		param = map.get(DartAPIProperty.CALLBACK	);
 		if (param != null && !param.equals("")) params.add(param);
 		
 		return params;
