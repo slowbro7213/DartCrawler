@@ -44,7 +44,28 @@ public class RequestDart {
 	public RequestDart(String url) {
 		this.requestUrl = url;
 	}
-		
+	
+	
+	public void print() {
+		System.out.println("\n\n");
+		System.out.println("callAPI parameters setting...");
+		System.out.println("        reqUrl   : " + getRequestUrl()	);
+		System.out.println("        auth     : " + getAuth()		);
+		System.out.println("        crp_cd   : " + getCrp_cd()		);
+		System.out.println("        end_dt   : " + getEnd_dt()		);
+		System.out.println("        start_dt : " + getStart_dt()	);
+		System.out.println("        fin_rpt  : " + getFin_rpt()		);
+		System.out.println("        dsp_tp   : " + getDsp_tp()		);
+		System.out.println("        bsn_tp   : " + getBsn_tp()		);
+		System.out.println("        sort     : " + getSort()		);
+		System.out.println("        series   : " + getSeries()		);
+		System.out.println("        page_no  : " + getPage_no()		);
+		System.out.println("        page_set : " + getPage_set()	);
+		System.out.println("        callback : " + getCallback()	);
+		System.out.println("\n\n");
+	}
+	
+	
 	
 	public String getRequestUrl() {
 		return requestUrl;

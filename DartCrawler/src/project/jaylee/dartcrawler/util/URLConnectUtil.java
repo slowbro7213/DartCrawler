@@ -26,6 +26,8 @@ public class URLConnectUtil {
 			uc.setDoInput(true);
 			uc.setUseCaches(false);
 			uc.setDefaultUseCaches(false);
+			uc.setConnectTimeout(2000);
+			uc.setReadTimeout(2000);
 			DataOutputStream dos = new DataOutputStream (uc.getOutputStream());
 			dos.write(parameters.getBytes());
 			dos.flush();
@@ -42,10 +44,12 @@ public class URLConnectUtil {
             } else {
                   errorCode = uc.getResponseCode();
                   return sb.toString();
-             }
+            }
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			uc.disconnect();
 		}
 		return sb.toString();
 	}

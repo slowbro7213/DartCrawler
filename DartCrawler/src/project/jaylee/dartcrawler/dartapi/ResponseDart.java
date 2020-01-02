@@ -89,6 +89,7 @@ public class ResponseDart {
 			for (int idx=0; idx<rcp_dt.size(); 	idx++) System.out.println("             " + idx + "  " + rcp_dt.get(idx)	);
 		System.out.println("  rmk         :");
 			for (int idx=0; idx<rmk.size(); 	idx++) System.out.println("             " + idx + "  " + rmk.get(idx)		);
+		System.out.println("\n\n");
 	}
 	
 	

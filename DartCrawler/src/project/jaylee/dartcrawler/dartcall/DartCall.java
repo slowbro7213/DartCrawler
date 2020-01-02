@@ -25,10 +25,33 @@ public class DartCall {
 	}
 	
 	private void setDefaultDate() {
-		this.df_start_dt = "" + this.cal.get(this.cal.YEAR) + this.cal.get(this.cal.MONTH) + this.cal.get(this.cal.DATE);
+		this.cal 	= Calendar.getInstance();
+		this.df_end_dt = "" + this.cal.get(this.cal.YEAR);
+		if (this.cal.get(this.cal.MONTH)+1<10) {
+			df_end_dt += "0" + (this.cal.get(this.cal.MONTH)+1);
+		} else {
+			df_end_dt += "" + (this.cal.get(this.cal.MONTH)+1);
+		}
+		if (this.cal.get(this.cal.DATE)+1<10) {
+			df_end_dt += "0" + (this.cal.get(this.cal.DATE));
+		} else {
+			df_end_dt += "" + (this.cal.get(this.cal.DATE));
+		}
+		
 		if (this.cal.MONTH == 2 && this.cal.DATE == 29) this.cal.add(this.cal.DATE, -1);
 		this.cal.add(this.cal.YEAR, -10);
-		this.df_end_dt = "" + this.cal.get(this.cal.YEAR) + this.cal.get(this.cal.MONTH) + this.cal.get(this.cal.DATE);
+		
+		this.df_start_dt = "" + this.cal.get(this.cal.YEAR);
+		if (this.cal.get(this.cal.MONTH)+1<10) {
+			df_start_dt += "0" + (this.cal.get(this.cal.MONTH)+1);
+		} else {
+			df_start_dt += "" + (this.cal.get(this.cal.MONTH)+1);
+		}
+		if (this.cal.get(this.cal.DATE)+1<10) {
+			df_start_dt += "0" + (this.cal.get(this.cal.DATE));
+		} else {
+			df_start_dt += "" + (this.cal.get(this.cal.DATE));
+		}
 	}
 	
 	private Calendar getCal() {
@@ -63,6 +86,8 @@ public class DartCall {
 	 */
 	public ResponseDart callAPI(ArrayList<String> params) {
 		int paramSize = params.size();
+		
+		System.out.println("[callAPI] ArrayList parameters size : " + paramSize);
 		
 		if (paramSize == 2) {
 			return callAPI(
@@ -202,7 +227,7 @@ public class DartCall {
 		if (page_no == null || !page_no.equals(""))	 	page_no		= "1";
 		if (page_set == null || !page_set.equals(""))	page_set	= "10";
 		// parameter default set :: end
-		
+
 		RequestDart reqDart = new RequestDart();
 					reqDart.setAuth(		auth				);	// ba03b3604fc296bc4b7bc7d9d4eff52dc40e9af6
 					reqDart.setCrp_cd(		crp_cd				);	// 035420
@@ -226,9 +251,11 @@ public class DartCall {
 	 * callAPI() 의 리턴 ResponseDart를 인자로 한다. ResponseDart의 rcp_no는  DART 뷰어 url의 파라미터이다.
 	 */
 	public ArrayList<String> getUrlList(ResponseDart respDart) {
+		respDart.print();
+		
 		ArrayList<String> rcpNoList = respDart.getRcp_no();
 		ArrayList<String> urlList = new ArrayList<String>();
-		
+
 		int len = rcpNoList.size();
 		for (int idx=0; idx<len; idx++) {
 			// PC
@@ -236,6 +263,7 @@ public class DartCall {
 			
 			// Mobile
 			//urlList.add(	DartAPIProperty.DART_VIEWER_MB_URL + "?" + DartAPIProperty.RCP_NO + "=" + rcpNoList.get(idx)	);
+
 		}
 		
 		return urlList;
